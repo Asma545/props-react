@@ -24,7 +24,7 @@ const App = () => {
     location: "Hyderabad, India"
   },
   {
-    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo.svg",
+    brandLogo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo_%28cropped%29.svg",
     companyName: "Meta",
     datePosted: "10 days ago",
     tag1: "Internship",
@@ -78,6 +78,7 @@ const App = () => {
     location: "Bangalore, India"
   }
 ];
+
 
 
 
