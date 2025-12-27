@@ -1,35 +1,48 @@
-import React from 'react'
 import { Download } from "lucide-react";
+import { Link } from "react-router-dom";
+import "../index.css";
 
-const card = (props) => {
-  console.log(props.company)
+const Card = ({ job }) => {
   return (
-    <div className='card'>
-  <div>
-  <div className="top">
-    <img src={props.logo}/>
-    <button>save <Download size= {12}/></button>
-  </div>
-  <div className="center">
-<h3>{props.company}<span>{props.datePosted}</span></h3>
-<h2>Senior UI/UX desinger</h2>
-<div className="tag">
-  <h4>{props.time}</h4>
-  <h4>{props.level}</h4>
-</div>
-  </div>
-  </div>
-  <div className="bottom">
-  <div>
-    <div>
-      <h3>{props.pay}</h3>
-      <p>{props.loc}</p>
-    </div>
-    <button>Apply now</button>
-  </div>
-  </div>
-</div>
-  )
-}
+    <div className="job-card">
+      
+      {/* top */}
+      <div className="card-top">
+        <img src={job.brandLogo} alt={job.companyName} />
+        <button className="save-btn">
+          Save <Download size={12} />
+        </button>
+      </div>
 
-export default card
+      {/* company */}
+      <p className="company">
+        {job.companyName}
+        <span>{job.datePosted}</span>
+      </p>
+
+      {/* role */}
+      <h3 className="role">Senior UI/UX Designer</h3>
+
+      {/* tags */}
+      <div className="tags">
+        <span>{job.tag1}</span>
+        <span>{job.tag2}</span>
+      </div>
+
+      {/* bottom */}
+      <div className="card-bottom">
+        <div>
+          <h4>{job.pay}</h4>
+          <p>{job.location}</p>
+        </div>
+
+        <Link to={`/apply/${job.id}`}>
+          <button className="apply-btn">Apply now</button>
+        </Link>
+      </div>
+
+    </div>
+  );
+};
+
+export default Card;
