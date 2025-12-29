@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import Apply from "./pages/apply";
 
 const App = () => {
-  <div className="noise-layer"></div>
   return (
     <Routes>
       <Route path="/" element={<Home />} />

@@ -1,11 +1,11 @@
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
+import job from "../data/jobs";
 import "../index.css";
 
 const Card = ({ job }) => {
   return (
     <div className="job-card">
-      
       {/* top */}
       <div className="card-top">
         <img src={job.brandLogo} alt={job.companyName} />
@@ -40,7 +40,6 @@ const Card = ({ job }) => {
           <button className="apply-btn">Apply now</button>
         </Link>
       </div>
-
     </div>
   );
 };
